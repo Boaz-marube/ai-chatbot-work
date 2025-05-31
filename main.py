@@ -5,7 +5,7 @@ import os
 #load_env()
 
 # 2. Paste your API key (between the quotes)
-client = groq.Groq(api_key="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")
+client = groq.Groq(api_key="your_groq_api_key_here...I removed the API key as it would be exposed.")
 #or
 # client = groq.Groq(api_key=os.getenv(GROQ_API_KEY)
 
@@ -17,7 +17,7 @@ while True:
     user_input = input("You: ")
     if user_input.lower() == 'exit':
         break
-
+    
     # 5. Send input to Groq
     response = client.chat.completions.create(
         model="llama3-8b-8192",
